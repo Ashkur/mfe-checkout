@@ -4,7 +4,7 @@ module.exports = {
   async rewrites() {
     return [
       {
-        source: "/checkout",
+        source: "https://www.nizen.com.br/checkout",
         destination: `https://checkout.nizen.com.br/checkout`,
       },
     ];
