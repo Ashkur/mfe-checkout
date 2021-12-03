@@ -9,7 +9,7 @@ module.exports = {
       // },
       {
         source: "/",
-        destination: "https://checkout.nizen.com.br/",
+        destination: "https://checkout.nizen.com.br",
       },
       // {
       //   source: "/checkout/:path*",
