@@ -3,18 +3,18 @@ module.exports = {
   basePath: "/checkout",
   async rewrites() {
     return [
-      {
-        source: "/:path*",
-        destination: `/:path*`,
-      },
+      // {
+      //   source: "/:path*",
+      //   destination: `/:path*`,
+      // },
       {
         source: "/checkout",
         destination: "https://checkout.nizen.com.br/checkout/",
       },
-      {
-        source: "/checkout/:path*",
-        destination: "https://checkout.nizen.com.br/checkout/:path*",
-      },
+      // {
+      //   source: "/checkout/:path*",
+      //   destination: "https://checkout.nizen.com.br/checkout/:path*",
+      // },
     ];
   },
 };
