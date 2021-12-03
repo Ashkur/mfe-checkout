@@ -8,7 +8,7 @@ module.exports = {
       //   destination: `/:path*`,
       // },
       {
-        source: "/checkout",
+        source: "/",
         destination: "https://checkout.nizen.com.br/",
       },
       // {
