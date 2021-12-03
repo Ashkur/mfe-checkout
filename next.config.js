@@ -4,6 +4,10 @@ module.exports = {
   async rewrites() {
     return [
       {
+        source: "/:path*",
+        destination: `/:path*`,
+      },
+      {
         source: "/checkout",
         destination: "https://checkout.nizen.com.br/checkout",
       },
