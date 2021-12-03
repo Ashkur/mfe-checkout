@@ -5,11 +5,11 @@ module.exports = {
     return [
       {
         source: "/checkout",
-        destination: "https://checkout.nizen.com.br/",
+        destination: "https://checkout.nizen.com.br/checkout",
       },
       {
         source: "/checkout/:path*",
-        destination: "https://checkout.nizen.com.br/:path*",
+        destination: "https://checkout.nizen.com.br/checkout/:path*",
       },
     ];
   },
