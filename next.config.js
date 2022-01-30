@@ -1,5 +1,6 @@
 module.exports = {
   reactStrictMode: true,
+  basePath: "/checkout",
   async rewrites() {
     return {
       fallback: [
