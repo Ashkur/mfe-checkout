@@ -80,6 +80,13 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@evob/evob.ui.teste@^0.0.1":
+  version "0.0.1"
+  resolved "https://node.bit.dev/@evob/evob.ui.teste/-/@evob-evob.ui.teste-0.0.1.tgz#08730ade28421334636e73f86511d2b840cc87c3"
+  integrity sha1-CHMK3ihCEzRjbnP4ZRHSuEDMh8M=
+  dependencies:
+    core-js "^3.0.0"
+
 "@hapi/accept@5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.2.tgz#ab7043b037e68b722f93f376afb05e85c0699523"
@@ -730,6 +737,11 @@ core-js-pure@^3.19.0:
   version "3.19.2"
   resolved "https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.19.2.tgz#26b5bfb503178cff6e3e115bc2ba6c6419383680"
   integrity sha512-5LkcgQEy8pFeVnd/zomkUBSwnmIxuF1C8E9KrMAbOc8f34IBT9RGvTYeNDdp1PnvMJrrVhvk1hg/yVV5h/znlg==
+
+core-js@^3.0.0:
+  version "3.21.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.21.1.tgz#f2e0ddc1fc43da6f904706e8e955bc19d06a0d94"
+  integrity sha512-FRq5b/VMrWlrmCzwRrpDYNxyHP9BcAZC+xHJaqTgIE5091ZV1NTmyh0sGOg5XqpnHvR0svdy0sv1gWA1zmhxig==
 
 create-ecdh@^4.0.0:
   version "4.0.4"
