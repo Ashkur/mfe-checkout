@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function SlugPage () {
+export default function SlugPage ({ slug }) {
     return (
         <div>
             {/* <h1>This is da page with slug: <b>{slug}</b></h1> */}
@@ -23,12 +23,14 @@ export default function SlugPage () {
     )
 }
 
-export async function getServerSideProps(context) {
-    console.log(context)
+export async function getStaticPaths() {
+    return { paths: [], fallback: true }
+} 
 
+export async function getServerSideProps({ params }) {
     return {
       props: {
-          slug: context.params.slug
+          slug: params.slug
       }, // will be passed to the page component as props
     }
   }
