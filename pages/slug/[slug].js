@@ -23,14 +23,11 @@ export default function SlugPage ({ slug }) {
     )
 }
 
-export async function getStaticPaths() {
-    return { paths: [], fallback: true }
-} 
-
 export async function getServerSideProps({ params }) {
     return {
-      props: {
-          slug: params.slug
-      }, // will be passed to the page component as props
+        fallback: true,
+        props: {
+            slug: params.slug
+        }, // will be passed to the page component as props
     }
   }
