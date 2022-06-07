@@ -12,8 +12,9 @@ export default function Home() {
 
   const onNavigate = () => {
     router.push({
-      hostname: 'https://checkout.nizen.com.br',
-      path: '/slug/my-awsome-slug'
+      protocol: 'https',
+      hostname: 'checkout.nizen.com.br',
+      pathname: '/slug/my-awsome-slug',
     })
   }
 
