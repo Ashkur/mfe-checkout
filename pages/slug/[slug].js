@@ -23,12 +23,12 @@ export default function SlugPage () {
     )
 }
 
-// export async function getServerSideProps(context) {
-//     console.log(context)
+export async function getServerSideProps(context) {
+    console.log(context)
 
-//     return {
-//       props: {
-//           slug: context.params.slug
-//       }, // will be passed to the page component as props
-//     }
-//   }
+    return {
+      props: {
+          slug: context.params.slug
+      }, // will be passed to the page component as props
+    }
+  }
