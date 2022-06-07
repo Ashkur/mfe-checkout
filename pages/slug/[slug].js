@@ -1,9 +1,9 @@
 import Link from 'next/link';
 
-export default function SlugPage ({ slug }) {
+export default function SlugPage () {
     return (
         <div>
-            <h1>This is da page with slug: <b>{slug}</b></h1>
+            {/* <h1>This is da page with slug: <b>{slug}</b></h1> */}
             <p>
                 <Link href="https://www.nizen.com.br">
                     <a>Home</a>
@@ -23,12 +23,12 @@ export default function SlugPage ({ slug }) {
     )
 }
 
-export async function getServerSideProps(context) {
-    console.log(context)
+// export async function getServerSideProps(context) {
+//     console.log(context)
 
-    return {
-      props: {
-          slug: context.params.slug
-      }, // will be passed to the page component as props
-    }
-  }
+//     return {
+//       props: {
+//           slug: context.params.slug
+//       }, // will be passed to the page component as props
+//     }
+//   }
