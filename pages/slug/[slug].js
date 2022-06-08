@@ -28,7 +28,10 @@ export default function SlugPage ({ slug }) {
 }
 
 export async function getServerSideProps({ req, params }) {
-    if(process.env.NODE_ENV === 'production') req.url = `https://heckout.wellaedu.com.br${req.url}`	
+    if(process.env.NODE_ENV === 'production'){
+        req.headers.host = 'checkout.nizen.com.br'
+        req.headers.referer = 'checkout.nizen.com.br'
+    }
 
     return {
         props: {
