@@ -5,11 +5,12 @@ export function middleware(req) {
 //     return NextResponse.rewrite(
 //       req.nextUrl.href.replace('/myprefix/_next/', '/_next/'),
 //     );
+    console.log(req.nextUrl)
 
-    if(process.env.NODE_ENV === 'production' && req.nextUrl.href.includes('/_next/')) {
+    if(process.env.NODE_ENV === 'production') {
         return NextResponse.rewrite(
-            req.nextUrl.href.replace('/_next/', `${process.env.NEXT_PUBLIC_ASSET_PREFIX}/_next/`),
-          );
+            req.nextUrl.host = process.env.NEXT_PUBLIC_ASSET_PREFIX
+        );
     }
 
     return null;
