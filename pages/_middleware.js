@@ -20,6 +20,6 @@ export function middleware(req) {
         // nextUrl.host = 'checkout.ninizen.com.br'
         // nextUrl.hostname = 'checkout.ninizen.com.br'
         
-        return NextResponse.rewrite(req.nextUrl.href.replace('/slug/', 'https://checkout.nizen.com.br/slug/'))
+        return NextResponse.rewrite(req.nextUrl.href.replace('/slug/', '/slug/'))
       }
 }
