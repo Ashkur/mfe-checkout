@@ -29,9 +29,11 @@ export default function SlugPage ({ slug }) {
 
 export async function getServerSideProps({ req, params }) {
     if(process.env.NODE_ENV === 'production'){
-        req.headers.host = 'checkout.nizen.com.br'
-        req.headers.referer = 'checkout.nizen.com.br'
+        // req.headers.host = 'checkout.nizen.com.br'
+        // req.headers.referer = 'checkout.nizen.com.br'
     }
+
+    // console.log(req.__NEXT_INIT_URL)
 
     return {
         props: {
