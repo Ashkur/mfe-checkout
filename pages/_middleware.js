@@ -23,9 +23,9 @@ export function middleware(req) {
 
     console.log(href.replace('www.nizen.com.br/_next/', 'checkout.nizen.com.br/_next/'))
 
-    console.log('req log', req)
+    console.log('req log', JSON.stringify(req))
 
-    console.log('nextUrl log', req.nextUrl)
+    console.log('nextUrl log', JSON.stringify(req.nextUrl))
 
     if (
         // process.env.NODE_ENV === 'production' &&
