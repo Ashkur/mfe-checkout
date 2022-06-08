@@ -28,6 +28,6 @@ export function middleware(req) {
         nextUrl.href = `https://${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`
         // nextUrl.href = `http://${host}${nextUrl.href}`
         
-        return NextResponse.rewrite(nextUrl)
+        return NextResponse.rewrite(nextUrl.href)
       }
 }
