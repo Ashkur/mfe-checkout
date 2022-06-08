@@ -7,7 +7,7 @@ module.exports = {
   assetPrefix: ASSET_PREFIX,
   rewrites() {
     return [
-      { source: `/${ASSET_PREFIX}/_next/:path*`, destination: '/_next/:path*' }
+      { source: '/_next/:path*', destination: `${ASSET_PREFIX}/_next/:path*` }
     ]
   }
 };
