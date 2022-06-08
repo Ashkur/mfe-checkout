@@ -26,6 +26,7 @@ export function middleware(req) {
         !nextUrl.pathname.startsWith('/api') // exclude all API routes
       ) {
         nextUrl.href = `https://${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`
+        console.log(nextUrl.href)
         // nextUrl.href = `http://${host}${nextUrl.href}`
         
         return NextResponse.rewrite(nextUrl)
