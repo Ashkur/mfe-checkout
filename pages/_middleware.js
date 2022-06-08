@@ -37,6 +37,6 @@ export function middleware(req) {
 
         console.log('nyam')
         
-        return NextResponse.rewrite(req.nextUrl.href.replace('www.nizen.com.br/_next/', 'checkout.nizen.com.br/_next/'),)
+        return NextResponse.rewrite(req.nextUrl.href.replace('www.nizen.com.br/_next/', 'checkout.nizen.com.br/_next/'))
       }
 }
