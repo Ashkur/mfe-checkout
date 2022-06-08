@@ -27,25 +27,12 @@ export default function SlugPage ({ slug }) {
     )
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ req, params }) {
+    if(process.env.NODE_ENV === 'production') req.url = `https://heckout.wellaedu.com.br${req.url}`	
+
     return {
-      props: {
-        slug: params.slug
-      }
+        props: {
+            slug: params.slug
+        }, // will be passed to the page component as props
     }
   }
-
-export async function getStaticPaths() {
-    return {
-      fallback: true,
-      paths: []
-    }
-  }
-
-// export async function getServerSideProps({ params }) {
-//     return {
-//         props: {
-//             slug: params.slug
-//         }, // will be passed to the page component as props
-//     }
-//   }
