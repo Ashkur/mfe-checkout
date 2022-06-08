@@ -1,34 +1,17 @@
 import { NextResponse } from 'next/server';
 
 export function middleware(req) {
-
-//   if (req.nextUrl.href.includes('/myprefix/_next/'))
-//     return NextResponse.rewrite(
-//       req.nextUrl.href.replace('/myprefix/_next/', '/_next/'),
-//     );]
-    let nextUrl = req.nextUrl
-
-    const host = 'localhost:3004'
-
-    // console.log({ 
-    //     nextUrl: nextUrl, 
-    //     href: `${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`,
-    //     pathname: nextUrl.pathname,
-    //     host,
-    //     url: {...req.nextUrl}
-    // })
-
-    const response = NextResponse.next()
-
     
     if(console.debug) console.debug(req)
 
     console.log('has /_next/ ', req.url.includes('/_next/'))
 
-    return response
+    req.nextUrl.host = 'checkout.nizen.com.br'
+
+    console.log(req.nextUrl)
 
     // if (
-    //     // process.env.NODE_ENV === 'production' &&
+    //     process.env.NODE_ENV === 'production' &&
     //     nextUrl.href.includes('/slug/')
     //   ) {
     //     // nextUrl.href = `https://${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`
@@ -39,7 +22,7 @@ export function middleware(req) {
     //     // nextUrl.host = 'checkout.ninizen.com.br'
     //     // nextUrl.hostname = 'checkout.ninizen.com.br'
 
-    //     console.log('nyam')
+        
         
     //     return NextResponse.rewrite(req.nextUrl.href.replace('/slug/', 'checkout.nizen.com.br/slug/'))
     //   }
