@@ -23,7 +23,9 @@ export default function SlugPage ({ slug }) {
     )
 }
 
-export async function getServerSideProps({ params }) {
+export async function getServerSideProps({ res, params }) {
+    res.setHeader('Host', 'checkout.nizen.com.br');
+    
     return {
         props: {
             slug: params.slug
