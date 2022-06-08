@@ -18,12 +18,13 @@ export function middleware(req) {
     //     url: {...req.nextUrl}
     // })
 
-    console.log( `https://${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`)
+    const href = req.nextUrl.href
+
+
+    console.log(href.replace('www.nizen.com.br/_next/', 'checkout.nizen.com.br/_next/'))
 
     if (
         // process.env.NODE_ENV === 'production' &&
-        !nextUrl.pathname.includes('.') && // exclude all files in the public folder
-        !nextUrl.pathname.startsWith('/api') && // exclude all API routes
         nextUrl.href.includes('www.nizen.com.br/_next/')
       ) {
         // nextUrl.href = `https://${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`
@@ -33,6 +34,8 @@ export function middleware(req) {
         // nextUrl.hostname = 'localhost'
         // nextUrl.host = 'checkout.ninizen.com.br'
         // nextUrl.hostname = 'checkout.ninizen.com.br'
+
+        console.log('nyam')
         
         return NextResponse.rewrite(req.nextUrl.href.replace('www.nizen.com.br/_next/', 'checkout.nizen.com.br/_next/'),)
       }
