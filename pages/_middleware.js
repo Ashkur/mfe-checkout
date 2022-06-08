@@ -8,17 +8,17 @@ export function middleware(req) {
 //     );]
     let nextUrl = req.nextUrl
 
-    let url = {...req.nextUrl}._url
+    // let url = {...req.nextUrl}._url
 
-    const host = url.host
+    // const host = url.host
 
-    console.log({ 
-        nextUrl: nextUrl, 
-        href: `${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`,
-        pathname: nextUrl.pathname,
-        url: url,
-        host
-    })
+    // console.log({ 
+    //     nextUrl: nextUrl, 
+    //     href: `${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`,
+    //     pathname: nextUrl.pathname,
+    //     url: url,
+    //     host
+    // })
 
     if (
         process.env.NODE_ENV === 'production' &&
