@@ -11,11 +11,25 @@ export default function Home() {
   const router = useRouter()
 
   const onNavigate = () => {
+    // if(process.env.NODE_ENV === 'production') {      
+    //   router.push({
+    //     protocol: 'https',
+    //     hostname: 'checkout.nizen.com.br',
+    //     pathname: '/slug/my-awsome-slug?param1=value1&param2=value2',
+    //     query: {
+    //       param1: 'value1',
+    //       param2: 'value2'
+    //     }
+    //   })
+    // }
+
     router.push({
-      protocol: 'https',
-      hostname: 'checkout.nizen.com.br',
       pathname: '/slug/my-awsome-slug',
-    })
+      query: {
+        param1: 'value1',
+        param2: 'value2'
+      }
+    })    
   }
 
   return (
