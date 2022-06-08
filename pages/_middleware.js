@@ -8,27 +8,29 @@ export function middleware(req) {
 //     );]
     let nextUrl = req.nextUrl
 
-    // let url = {...req.nextUrl}._url
-
-    // const host = url.host
+    const host = 'localhost:3004'
 
     // console.log({ 
     //     nextUrl: nextUrl, 
     //     href: `${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`,
     //     pathname: nextUrl.pathname,
-    //     url: url,
-    //     host
+    //     host,
+    //     url: {...req.nextUrl}
     // })
 
     if (
-        process.env.NODE_ENV === 'production' &&
+        // process.env.NODE_ENV === 'production' &&
         !nextUrl.pathname.includes('.') && // exclude all files in the public folder
         !nextUrl.pathname.startsWith('/api') // exclude all API routes
       ) {
-        // nextUrl.href = `https://${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`
+        nextUrl.href = `https://${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`
         // console.log(nextUrl.href)
         // nextUrl.href = `http://${host}${nextUrl.href}`
+        // nextUrl.host = 'localhost:3004'
+        // nextUrl.hostname = 'localhost'
+        nextUrl.host = 'checkout.ninizen.com.br'
+        nextUrl.hostname = 'checkout.ninizen.com.br'
         
-        return NextResponse.rewrite(req.nextUrl.href.replace(nextUrl.href, `https://${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`))
+        return NextResponse.rewrite(nextUrl.href)
       }
 }
