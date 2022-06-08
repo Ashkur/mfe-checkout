@@ -10,16 +10,18 @@ export function middleware(req) {
 
     console.log(req.nextUrl)
 
-    if (
-        process.env.NODE_ENV === 'production') {
-        // nextUrl.href = `https://${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`
-        // console.log(nextUrl.href)
-        // nextUrl.href = `http://${host}${nextUrl.href}`
-        // nextUrl.host = 'localhost:3004'
-        // nextUrl.hostname = 'localhost'
-        // nextUrl.host = 'checkout.ninizen.com.br'
-        // nextUrl.hostname = 'checkout.ninizen.com.br'
+    req.setHeader('host', 'checkout.nizen.com.br')
+
+    // if (
+    //     process.env.NODE_ENV === 'production') {
+    //     // nextUrl.href = `https://${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`
+    //     // console.log(nextUrl.href)
+    //     // nextUrl.href = `http://${host}${nextUrl.href}`
+    //     // nextUrl.host = 'localhost:3004'
+    //     // nextUrl.hostname = 'localhost'
+    //     // nextUrl.host = 'checkout.ninizen.com.br'
+    //     // nextUrl.hostname = 'checkout.ninizen.com.br'
         
-        return NextResponse.rewrite(req.nextUrl.href.replace('/slug/', '/slug/'))
-      }
+    //     return NextResponse.rewrite(req.nextUrl.href.replace('/slug/', '/slug/'))
+    //   }
 }
