@@ -20,14 +20,7 @@ export function middleware(req) {
 
     const response = NextResponse.next()
 
-    console.log('response ', response)
-
-    console.log({
-        href: req.nextUrl.href,
-        pathname: req.nextUrl.pathname,
-        host: req.nextUrl.host,
-        hostname: req.nextUrl.hostname
-    })
+    console.log('has /_next/ ', req.url.includes('/_next/'))
 
     return response
 
