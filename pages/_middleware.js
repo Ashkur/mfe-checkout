@@ -18,12 +18,9 @@ export function middleware(req) {
     //     url: {...req.nextUrl}
     // })
 
-    const href = req.nextUrl.href
+    const response = NextResponse.next()
 
-
-    console.log(href.replace('www.nizen.com.br/_next/', 'checkout.nizen.com.br/_next/'))
-
-    console.log('req log', req)
+    console.log('response ', response)
 
     console.log({
         href: req.nextUrl.href,
@@ -31,6 +28,8 @@ export function middleware(req) {
         host: req.nextUrl.host,
         hostname: req.nextUrl.hostname
     })
+
+    return response
 
     // if (
     //     // process.env.NODE_ENV === 'production' &&
