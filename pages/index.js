@@ -2,6 +2,8 @@ import Link from 'next/link';
 
 import { useRouter } from 'next/router';
 
+import { useFormContext } from '../context/FormContext';
+
 import styles from "../styles/Home.module.css";
 
 import { Teste } from "@evob/evob.ui.teste/dist/teste";
@@ -9,6 +11,8 @@ import { Teste } from "@evob/evob.ui.teste/dist/teste";
 export default function Home() {
 
   const router = useRouter()
+
+  const { setName } = useFormContext()
 
   const onNavigate = () => {
     // if(process.env.NODE_ENV === 'production') {      
@@ -22,6 +26,8 @@ export default function Home() {
     //     }
     //   })
     // }
+
+    setName('Nizen')
 
     router.push({
       pathname: '/slug/my-awsome-slug',
