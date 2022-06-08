@@ -20,6 +20,9 @@ export function middleware(req) {
 
     const response = NextResponse.next()
 
+    
+    if(console.debug) console.debug(req)
+
     console.log('has /_next/ ', req.url.includes('/_next/'))
 
     return response
