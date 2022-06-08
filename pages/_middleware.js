@@ -8,9 +8,8 @@ export function middleware(req) {
     console.log(req.nextUrl)
 
     if(process.env.NODE_ENV === 'production') {
-        return NextResponse.rewrite(
-            req.nextUrl.host = process.env.NEXT_PUBLIC_ASSET_PREFIX
-        );
+        req.nextUrl.host = process.env.NEXT_PUBLIC_ASSET_PREFIX
+        return NextResponse.rewrite(req.nextUrl.host);
     }
 
     return null;
