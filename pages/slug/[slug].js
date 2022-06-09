@@ -27,6 +27,24 @@ export default function SlugPage ({ slug }) {
     )
 }
 
+export async function getStaticPaths() {
+    return {
+      paths: [
+          'checkout.nizen.com.br/slug/my-awsome-slug',
+          'www.nizen.com.br/slug/my-awsome-slug',
+      ],
+      fallback: true, // fallback true allows sites to be generated using ISR
+    }
+  }
+  
+  export async function getStaticProps({ params }) {
+  
+    return {
+      props: { slug: params.slug },
+      revalidate: 10, // set revalidate interval of 10s
+    }
+  }
+
 // export async function getServerSideProps({ req, params }) {
 //     if(process.env.NODE_ENV === 'production'){
 //         // req.headers.host = 'checkout.nizen.com.br'
