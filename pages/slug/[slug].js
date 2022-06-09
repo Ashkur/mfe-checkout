@@ -33,6 +33,8 @@ export async function getServerSideProps({ req, params }) {
         // req.headers.referer = 'checkout.nizen.com.br'
     }
 
+    // console.log(req.setHeaders('host', 'checkout.nizen.com.br'))
+
     // console.log(req.__NEXT_INIT_URL)
 
     return {

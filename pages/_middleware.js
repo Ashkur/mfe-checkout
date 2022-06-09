@@ -8,7 +8,9 @@ export function middleware(req) {
 
     // req.nextUrl.host = 'checkout.nizen.com.br'
 
-    console.log(req.nextUrl)
+    // console.log(req.nextUrl.setHeader('host', 'checkout.nizen.com.br'))
+    // const a = {...req.nextUrl}
+    // console.log(a)
 
     // if (
     //     process.env.NODE_ENV === 'production') {

@@ -26,17 +26,17 @@ module.exports = {
       { source: '/_next/:path*', destination: `${ASSET_PREFIX}/_next/:path*` }
     ]
   },
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'host',
-            value: 'checkout.nizen.com.br',
-          },
-        ],
-      }
-    ]
-  },
+  // async headers() {
+  //   return [
+  //     {
+  //       source: '/:path*',
+  //       headers: [
+  //         {
+  //           key: 'host',
+  //           value: 'checkout.nizen.com.br',
+  //         },
+  //       ],
+  //     }
+  //   ]
+  // },
 };
