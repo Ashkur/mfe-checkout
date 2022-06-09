@@ -10,8 +10,6 @@ export function middleware(req) {
 
     console.log(req.nextUrl)
 
-    req.setHeader('host', 'checkout.nizen.com.br')
-
     // if (
     //     process.env.NODE_ENV === 'production') {
     //     // nextUrl.href = `https://${process.env.NEXT_PUBLIC_ASSET_PREFIX}${nextUrl.href}`
