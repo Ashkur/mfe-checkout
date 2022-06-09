@@ -30,8 +30,7 @@ export default function SlugPage ({ slug }) {
 export async function getStaticPaths() {
     return {
       paths: [
-          'checkout.nizen.com.br/slug/my-awsome-slug',
-          'www.nizen.com.br/slug/my-awsome-slug',
+          '/slug/my-awsome-slug'
       ],
       fallback: true, // fallback true allows sites to be generated using ISR
     }
