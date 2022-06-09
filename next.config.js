@@ -13,9 +13,9 @@ function checkoutHeader() {
         },
       ],
     }
-
-    return {}
   }
+  
+  return {}
 }
 
 module.exports = {
@@ -28,7 +28,15 @@ module.exports = {
   },
   async headers() {
     return [
-      checkoutHeader()
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'host',
+            value: 'checkout.nizen.com.br',
+          },
+        ],
+      }
     ]
   },
 };
